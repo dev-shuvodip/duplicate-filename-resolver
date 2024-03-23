@@ -2,6 +2,8 @@
 
 This package matches a file name of type `string` against an Array of objects of type `IFileName` and return a unique file name of type `string`.
 
+[See it in action ⚡️](https://stackblitz.com/edit/stackblitz-starters-6vmtw3)
+
 ## Install
 
 `npm i duplicate-filename-resolver --save`
