@@ -1,7 +1,7 @@
 {
   "name": "duplicate-filename-resolver",
   "description": "Generate unique file names.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "name": "Shuvodip Ray",
     "email": "chrispbacon961@gmail.com"
