@@ -20,18 +20,19 @@ export function getUniqueFileName(allFiles: File[] | IFileNameCollection[], newF
         }
         if (counter >= 1) {
             let _tempNameSubString: string = fileNameResolver(newFileName);
+            let _tempExtensionSubString: string = fileExtensionResolver(newFileName);
             var numericMatch: RegExpMatchArray = _tempNameSubString.match(/\s(\(\d\))+$/g);
             if (numericMatch) {
                 var incrementor: number | any = Number(numericMatch[0].replace(/(?<!.*\(.*)\(|\)(?!.*\).*)/g, ''));
                 if (isNaN(incrementor)) {
-                    uniqueName = `${_tempNameSubString} (1).${newFileName.split('.')[newFileName.split('.').length - 1]}`;
+                    uniqueName = `${_tempNameSubString} (1).${_tempExtensionSubString}`;
                     return getUniqueFileName(allFiles, uniqueName);
                 } else {
-                    uniqueName = `${_tempNameSubString.replace(/(\(\d\))+$/g, '').trim()} (${incrementor + 1}).${newFileName.split('.')[newFileName.split('.').length - 1]}`;
+                    uniqueName = `${_tempNameSubString.replace(/(\(\d\))+$/g, '').trim()} (${incrementor + 1}).${_tempExtensionSubString}`;
                     return getUniqueFileName(allFiles, uniqueName);
                 }
             } else {
-                uniqueName = `${_tempNameSubString} (1).${newFileName.split('.')[newFileName.split('.').length - 1]}`;
+                uniqueName = `${_tempNameSubString} (1).${_tempExtensionSubString}`;
                 return getUniqueFileName(allFiles, uniqueName);
             }
         }
@@ -48,11 +49,19 @@ export function getUniqueFileName(allFiles: File[] | IFileNameCollection[], newF
  * @returns Returns file name of type `string` with the file extension sliced out.
  */
 export function fileNameResolver(newFileName: string) {
-    let _tempNameSubString: string = "";
-    for (let i: number = 0; i < newFileName.split('.').length - 1; i++) {
-        _tempNameSubString = newFileName.split('.').slice(0, -1).join('.')
-    }
+    const _tempNameSubString: string = newFileName.split('.').slice(0, -1).join('.');
     return _tempNameSubString;
+}
+
+/**
+ * Returns file extension from file name.
+ * 
+ * @param newFileName File name of type `string`.
+ * @returns Returns file extension of type `string` from file name.
+ */
+export function fileExtensionResolver(newFileName: string) {
+    const _tempExtensionSubString: string = newFileName.split('.')[newFileName.split('.').length - 1];
+    return _tempExtensionSubString;
 }
 
 export * from './types'
