@@ -22,6 +22,7 @@
   "scripts": {
     "build": "npx tsc"
   },
+  "license": "MIT",
   "licenses": [
     {
       "type": "MIT",
