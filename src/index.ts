@@ -1,14 +1,14 @@
-import { IFileNameCollection } from './types';
+import { IFileName } from './types';
 
 /**
- * Iterates through passed collection `allFiles` of type `File[] | IFileNameCollection[]` matching passed `newFileName` of type `string`.
+ * Iterates through passed collection `allFiles` of type `IFileName[]` matching passed `newFileName` of type `string`.
  * If duplicate is found, return a new unique file name. Else, returns same name.
  * 
- * @param allFiles Array of objects of type `File | IFileNameCollection`.
+ * @param allFiles Array of objects of type `IFileName`.
  * @param newFileName File name of type `string`.
  * @returns Returns a unique `string` file name, if duplicate is found.
  */
-export function getUniqueFileName(allFiles: File[] | IFileNameCollection[], newFileName: string): string {
+export function getUniqueFileName(allFiles: IFileName[], newFileName: string): string {
     try {
         if (newFileName.indexOf('.') < 0) {
             throw new Error("Invalid file name");
