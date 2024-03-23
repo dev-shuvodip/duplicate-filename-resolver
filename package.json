@@ -1,0 +1,25 @@
+{
+  "name": "unique-filename-generator",
+  "description": "Generate unique file names.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Shuvodip Ray",
+    "email": "chrispbacon961@gmail.com"
+  },
+  "keywords": [
+    "github",
+    "typescript",
+    "repos",
+    "repositories",
+    "sort",
+    "stars"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.4.3"
+  }
+}
