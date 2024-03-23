@@ -1,7 +1,7 @@
 /**
  * Represents an Object containing file name
  */
-export interface IFileNameCollection {
+export interface IFileName {
     /**
      * @name File name of type `String`
      */

@@ -1,6 +1,6 @@
 # duplicate-filename-resolver
 
-This package matches a file name of type `string` against an Array of objects of type `IFileNameCollection` and return a unique file name of type `string`.
+This package matches a file name of type `string` against an Array of objects of type `IFileName` and return a unique file name of type `string`.
 
 ## Install
 
@@ -8,7 +8,7 @@ This package matches a file name of type `string` against an Array of objects of
 
 ## Exports
 
-- `IFileNameCollection` - Represents an Object containing file name.
+- `IFileName` - Represents an Object containing file name.
 
 ```
 {
@@ -16,27 +16,27 @@ This package matches a file name of type `string` against an Array of objects of
 }
 ```
 
-- `getUniqueFileName(allFiles: IFileNameCollection[], newFileName: string)` - Iterates through passed array `allFiles` of type `IFileNameCollection[]` matching passed `newFileName` of type `string`. If duplicate is found, return a new unique file name. Else, returns same name.
+- `getUniqueFileName(allFiles: IFileName[], newFileName: string)` - Iterates through passed array `allFiles` of type `IFileName[]` matching passed `newFileName` of type `string`. If duplicate is found, return a new unique file name. Else, returns same name.
 
 ## Usage
 
 Import the package.
 
 ```
-import { getUniqueFileName, IFileNameCollection } from "duplicate-filename-resolver";
+import { getUniqueFileName, IFileName } from "duplicate-filename-resolver";
 ```
 
-Declare a variable `allFiles` of type `IFileNameCollection`.
+Declare a variable `allFiles` of type `IFileName`.
 
 ```
-var allFiles: IFileNameCollection[] = [{
+var allFiles: IFileName[] = [{
   name: "file.txt"
 }];
 ```
 
-> `allFiles` is a array of type `IFileNameCollection[]`.
+> `allFiles` is a array of type `IFileName[]`.
 
-Call method `getUniqueFileName(allFiles: IFileNameCollection[], newFileName: string)` and pass `alFiles` array and a `string` file name.
+Call method `getUniqueFileName(allFiles: IFileName[], newFileName: string)` and pass `alFiles` array and a `string` file name.
 
 ```
 var fileName string = getUniqueFileName(this.allFiles, "file.txt");
@@ -49,7 +49,7 @@ var fileName string = getUniqueFileName(this.allFiles, "file.txt");
 -
 
 ```
-var allFiles: IFileNameCollection[] = [{
+var allFiles: IFileName[] = [{
   name: "file (1).txt"
 }];
 var fileName string = getUniqueFileName(this.allFiles, "file (1).txt");
@@ -60,7 +60,7 @@ var fileName string = getUniqueFileName(this.allFiles, "file (1).txt");
 -
 
 ```
-var allFiles: IFileNameCollection[] = [{
+var allFiles: IFileName[] = [{
   name: "file (1).txt"
 }];
 var fileName string = getUniqueFileName(this.allFiles, "file(1).txt");
@@ -71,7 +71,7 @@ var fileName string = getUniqueFileName(this.allFiles, "file(1).txt");
 -
 
 ```
-var allFiles: IFileNameCollection[] = [{
+var allFiles: IFileName[] = [{
   name: "file(1).txt"
 }];
 var fileName string = getUniqueFileName(this.allFiles, "file(1).txt");
@@ -82,7 +82,7 @@ var fileName string = getUniqueFileName(this.allFiles, "file(1).txt");
 -
 
 ```
-var allFiles: IFileNameCollection[] = [{
+var allFiles: IFileName[] = [{
   name: "file.(1).txt"
 }];
 var fileName string = getUniqueFileName(this.allFiles, "file.(1).txt");
@@ -93,7 +93,7 @@ var fileName string = getUniqueFileName(this.allFiles, "file.(1).txt");
 -
 
 ```
-var allFiles: IFileNameCollection[] = [{
+var allFiles: IFileName[] = [{
   name: "file (1)(2).txt"
 }];
 var fileName string = getUniqueFileName(this.allFiles, "file (1)(2).txt");
