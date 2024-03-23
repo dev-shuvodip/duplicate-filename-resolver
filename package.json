@@ -1,5 +1,5 @@
 {
-  "name": "duplicate-filename-generator",
+  "name": "duplicate-filename-resolver",
   "description": "Generate unique file names.",
   "version": "1.0.0",
   "author": {
