@@ -39,6 +39,7 @@ export function getUniqueFileName(allFiles: IFileName[], newFileName: string): s
         return uniqueName;
     } catch (error) {
         console.error(error);
+        throw error;
     }
 }
 
