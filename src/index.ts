@@ -35,6 +35,7 @@ export function getUniqueFileName(allFiles: IFileName[], newFileName: string): s
                 uniqueName = `${_tempNameSubString} (1).${_tempExtensionSubString}`;
                 return getUniqueFileName(allFiles, uniqueName);
             }
+            console.log("test");
         }
         return uniqueName;
     } catch (error) {
