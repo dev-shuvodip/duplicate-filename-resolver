@@ -3,7 +3,7 @@
  */
 export interface IFileName {
     /**
-     * @name File name of type `String`
+     * File name of type `String`
      */
     name: string;
 }
