@@ -7,6 +7,10 @@ This package matches a file name of type `string` against an Array of objects of
 
 [See it in action ⚡️](https://stackblitz.com/edit/stackblitz-starters-6vmtw3)
 
+## Changelog
+
+[Learn about the latest improvements][changelog].
+
 ## Install
 
 `npm i duplicate-filename-resolver --save`
@@ -106,3 +110,5 @@ var fileName string = getUniqueFileName(this.allFiles, "file (1)(2).txt");
 ```
 
 > Output - "file (1)(2) (1).txt"
+
+[changelog]: CHANGELOG.md
