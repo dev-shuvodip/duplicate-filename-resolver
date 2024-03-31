@@ -1,9 +1,13 @@
 /**
- * Represents an Object containing file name
+ * Represents an Object containing file name.
  */
-export interface IFileName {
+export interface IFile {
     /**
-     * File name of type `String`
+     * A `string`, containing the name of the file without path, such as "My Resume.rtf".
      */
     name: string;
+    /**
+     * The `File` object.
+     */
+    file: File;
 }

@@ -1,4 +1,4 @@
-import { IFileName } from './types';
+import { IFile } from './types';
 
 /**
  * Iterates through passed collection `allFiles` of type `IFileName[]` matching passed `newFileName` of type `string`.
@@ -8,7 +8,7 @@ import { IFileName } from './types';
  * @param newFileName File name of type `string`.
  * @returns Returns a unique `string` file name, if duplicate is found.
  */
-export function getUniqueFileName(allFiles: IFileName[], newFileName: string): string {
+export function getUniqueFileName(allFiles: IFile[] | File[], newFileName: string): string {
     try {
         if (newFileName.indexOf('.') < 0) {
             throw new Error("Invalid file name");
