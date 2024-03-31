@@ -1,10 +1,10 @@
 import { IFile } from './types';
 
 /**
- * Iterates through passed collection `allFiles` of type `IFileName[]` matching passed `newFileName` of type `string`.
+ * Iterates through passed collection `allFiles` of type `IFile[]` matching passed `newFileName` of type `string`.
  * If duplicate is found, return a new unique file name. Else, returns same name.
  * 
- * @param allFiles Array of objects of type `IFileName`.
+ * @param allFiles Array of objects of type `IFile`.
  * @param newFileName File name of type `string`.
  * @returns Returns a unique `string` file name, if duplicate is found.
  */
