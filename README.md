@@ -1,7 +1,7 @@
 # duplicate-filename-resolver
 
 [![npm version](https://badge.fury.io/js/duplicate-filename-resolver.svg)](https://badge.fury.io/js/duplicate-filename-resolver)
-![NPM Downloads](https://img.shields.io/npm/dm/duplicate-filename-resolver)
+![NPM Downloads](https://img.shields.io/npm/d18m/duplicate-filename-resolver)
 
 This package matches a file name of type `string` against an Array of objects of type `IFile` and return a unique file name of type `string`.
 
