@@ -56,7 +56,7 @@ var fileName string = getUniqueFileName(this.allFiles, "file.txt");
 
 ## Examples
 
--
+
 
 ```
 var allFiles: IFile[] = [{
@@ -67,7 +67,7 @@ var fileName string = getUniqueFileName(this.allFiles, "file (1).txt");
 
 > Output - "file (2).txt"
 
--
+
 
 ```
 var allFiles: IFile[] = [{
@@ -78,7 +78,7 @@ var fileName string = getUniqueFileName(this.allFiles, "file(1).txt");
 
 > Output - "file(1).txt"
 
--
+
 
 ```
 var allFiles: IFile[] = [{
@@ -89,7 +89,7 @@ var fileName string = getUniqueFileName(this.allFiles, "file(1).txt");
 
 > Output - "file(1) (1).txt"
 
--
+
 
 ```
 var allFiles: IFile[] = [{
@@ -100,7 +100,7 @@ var fileName string = getUniqueFileName(this.allFiles, "file.(1).txt");
 
 > Output - "file.(1) (1).txt"
 
--
+
 
 ```
 var allFiles: IFile[] = [{
